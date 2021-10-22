@@ -1,3 +1,5 @@
+/*General Styles*/
+
 body{
     margin: 0;
     padding: 0;
@@ -30,6 +32,7 @@ li{
     padding-left: 70px;
 }
 
+/*Navigation Bar and Contact Button*/
 nav{
     height: 40px;
     flex-direction: row;
@@ -48,6 +51,7 @@ button{
     border-color: white;
 }
 
+/*Home Page Header/ Hero Section*/
 header{
     display: flex;
     background: url(../images/desktop/image-header1.jpg);
@@ -66,32 +70,35 @@ header{
     align-items: flex-start;
 }
 
-.grid-section{
+/*Grid Section for more info with images*/
+#grid-section{
     display: grid;
     grid-template-columns: repeat(2,1fr); 
-    grid-template-rows: repeat(3, 1fr);
-    margin-bottom: -10px;
-}
+    grid-template-rows: repeat(3, 1fr)
+   }
 
 img{
+    height: 100%;
     width: 100%;
 }
 
 .transform-text, .standout-text{
-    margin: 180px
+    margin: 180px;
+    width: 50%;
+    height: 100%;
 }
 
 .standout-img{
     grid-column: 1/2;
     grid-row: 2/3;
-    margin-top: -5px;
+
 }
 
 .standout-text{
     grid-column: 2/3;
 }
 
-.photo-text{
+.photo{
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -102,7 +109,7 @@ img{
     margin-top: -10px;
 }
 
-.graphic-text{
+.graphic{
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -112,3 +119,10 @@ img{
     background-size: cover; 
     margin-top: -10px;
 }
+/*Testimonials Style Section*/
+
+#testimonials{
+    height: 100vw;
+}
+/*Footer Styles*/
+
