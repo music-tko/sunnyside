@@ -66,8 +66,13 @@ nav{
     flex-direction: row;
     display: flex;
     margin-top: 20px;
+    margin-right: 20px;
     justify-content: flex-end;
     width: 100%;
+  }
+
+  nav ul{
+    margin-right: 30px;
   }
 
 button{
@@ -108,24 +113,49 @@ header{
     width: 40px;
     height: 90px;
     text-align: center;
+    margin-top: -20px;
+}
+
+/*Mobile Version*/
+
+@media only screen and (max-width: 600px){
+    header{
+        display: flex;
+        width: 100%;
+        height: 650px;
+        text-align: center;
+        flex-direction: column;
+        background: url(../images/mobile/image-header.jpg);
+        background-position: bottom;
+        background-size:cover;
+    }
+    .header-text{
+        font-size: 60px;
+    }
+    .arrow{
+       
+        text-align: center;
+        margin-top: 60px;
+    }
 }
 
 /*Grid Section for more info with images*/
 #grid-section{
     display: grid;
     grid-template-columns: repeat(2,1fr); 
-    grid-template-rows: repeat(3, 1fr)
+    grid-template-rows: repeat(3, 1fr);
+    max-width: 100%;
    }
 
 img{
     height: 90vh;
     width: 100%;
-    
 }
 
 .transform-text{ 
     margin:  110px 100px 0 160px;
     height: 100%;
+    grid-column: 1/2;
 }
 
 .standout-text{
@@ -233,6 +263,32 @@ img{
     margin: 0 150px 30px 150px;
 }
 
+/*MOBILE VERSION*/
+@media only screen and (max-width:700px) {
+    #grid-section{
+        display: grid;
+        grid-template-columns: min-content;
+        max-width: 100%;
+        flex-direction: column;
+       }
+
+    .transform-text{
+        margin: 50px 22px 100px 20px;
+        text-align: center;
+
+    }
+
+    .transform-img{
+
+    }
+
+    .learn-y::after{
+      margin-left: 112px;
+      width: 120px;
+
+    }
+
+}
 /*Testimonials Style Section*/
 
 #testimonials{
@@ -281,8 +337,9 @@ footer{
     display: flex;
     text-align: center;
     flex-direction: column;
-    row-gap: 30px;
+    row-gap: 25px;
 }
+
 #foot-imgs img{
     width: 337.35px;
     height: 400px;
@@ -293,21 +350,25 @@ footer{
     display: flex;
 }
 
-#socials img{
-    width: 20px;
-    height: 20px;
-    margin: 10px;
-}
-
 #socials{
+    display: grid;
+    grid-template-columns: repeat(4, 45px);
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 30px;
+    margin-left: 20px;
+}
+
+path:hover{
+    fill:white;
 }
 
 .index a{
     margin: 20px;
+}
+
+.index a:hover{
+    color:white
 }
 
 .attribution a{
